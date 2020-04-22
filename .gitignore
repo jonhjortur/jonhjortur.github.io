@@ -4,7 +4,6 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-myNotes.txt
 
 # Runtime data
 pids
@@ -68,3 +67,7 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Personal
+myNotes.md
+GatsbyJS_LinksAndStuff.txt
