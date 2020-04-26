@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 const Sidebar = () => (
   <div>
-    <Card>
+   {/* <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
           Fáðu tilkynningar...eða contact-form...eða ekkert
@@ -19,7 +19,7 @@ const Sidebar = () => (
           </button>
         </Form>
       </CardBody>
-    </Card>
+    </Card>  */}
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase">
@@ -39,12 +39,12 @@ const Sidebar = () => (
           <div>
             {data.allMarkdownRemark.edges.map(({node}) => (
               <Card key={node.id}>
-                <Link to={node.frontmatter.path}>
+                <Link to={node.fields.slug}>
                   <Img className="card-image-top" fluid={node.frontmatter.image.childImageSharp.fluid}/>
                 </Link>
                 <CardBody>
                   <CardTitle>
-                    <Link to={node.frontmatter.path}>
+                    <Link to={node.fields.slug}>
                       {node.frontmatter.title}
                     </Link>
                   </CardTitle>
@@ -69,7 +69,6 @@ const sidebarQuery = graphql`
           id
           frontmatter {
             title
-            path
             image {
               childImageSharp {
                 fluid(maxWidth: 300) {
@@ -77,6 +76,9 @@ const sidebarQuery = graphql`
                 }
               }
             }
+          }
+          fields {
+            slug
           }
         }
       }
