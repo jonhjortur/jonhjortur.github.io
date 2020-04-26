@@ -1,9 +1,9 @@
 ---
-title: "Second post - HTML"
+title: "C++ deep dive"
 date: 2018-12-02 07:00:00
 author: "Saga Gná"
 path: "/second-post"
-image: ../../images/testThumbJS1.jpg
+image: ../../images/testThumbCpp1.png
 ---
 
-More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post. More content for a post.
+C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++

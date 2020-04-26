@@ -19,7 +19,7 @@ const Post = ({ title, author, path, date, body, fluid }) => {
         </CardSubtitle>
         <CardText>{body}</CardText>
         <Link to={path} className="btn btn-outline-primary float-right">
-          Read more
+          Skoða þetta
         </Link>
       </CardBody>
     </Card>
