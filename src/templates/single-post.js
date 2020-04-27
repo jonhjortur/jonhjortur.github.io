@@ -5,13 +5,13 @@ import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 import { Row, Col, Card, CardBody, CardSubtitle, Badge } from "reactstrap"
 import Img from "gatsby-image"
-import { slugify } from "../utils/utilFuncs"
+import { slugify, youtubeId } from "../utils/utilFuncs"
 
 const SinglePost = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   return (
     <Layout>
-      <SEO title={post.title} />
+      <SEO title={post.title}/>
       <h1>{post.title}</h1>
       <Row>
         <Col md="8">
@@ -21,6 +21,14 @@ const SinglePost = ({ data }) => {
               fluid={post.image.childImageSharp.fluid}
             />
             <CardBody>
+              <div class="iframe-container">
+                <iframe
+                  src={`https://www.youtube.com/embed/${youtubeId(post.youtube)}`} //Þessi lína er áfangi í lífi mínu !! Ekkert minna !!!
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
               <CardSubtitle>
                 <span className="text-info">{post.date}</span> -{" "}
                 <span className="text-info">{post.author}</span>
@@ -30,13 +38,12 @@ const SinglePost = ({ data }) => {
               />
               <ul className="post-tags">
                 {post.tags.map(tag => (
-                    <li key={tag}>
-                      <Link to={`/tag/${slugify(tag)}`}>
-                        <Badge color="primary">{tag}</Badge>
-                      </Link>
-                    </li>
-                  )
-                )}
+                  <li key={tag}>
+                    <Link to={`/tag/${slugify(tag)}`}>
+                      <Badge color="primary">{tag}</Badge>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </CardBody>
           </Card>
@@ -57,8 +64,10 @@ export const postQuery = graphql`
       frontmatter {
         title
         author
+        youtube
         date(formatString: "D/M/YYYY")
         tags
+
         image {
           childImageSharp {
             fluid(maxWidth: 700) {

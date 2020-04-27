@@ -1,14 +1,14 @@
 ---
-title: "Java - Live with it!"
-youtube: "https://www.youtube.com/embed/6gzkB6sY2hk"
+title: "Python fyrir byrjendur"
+youtube: "https://www.youtube.com/watch?v=rNpljc5aH1k&list=RDQMFzcXdys2U2A&start_radio=1"
 date: 2018-12-03 07:00:00
 author: "Jón Hjörtur"
-image: ../../images/testThumbJava1.jpg
+image: ../../images/testThumbPython1.jpg
 tags:
 - Java
 - Computer science
 - Algorithms
 ---
-src frá iframe YouTube
+
 Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java 
 Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java Java
