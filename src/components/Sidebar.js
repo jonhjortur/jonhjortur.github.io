@@ -2,6 +2,7 @@ import React from "react"
 import { Card, CardTitle, CardBody, Form, FormGroup, Input } from "reactstrap"
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from "gatsby-image"
+import "../styles/index.scss"
 
 const Sidebar = () => (
   <div>
@@ -25,7 +26,7 @@ const Sidebar = () => (
         <CardTitle className="text-center text-uppercase">
           Portfolio
         </CardTitle>
-        <a href="https://jonhjortur.com/" target="_blank">
+        <a href="https://jonhjortur.com/" target="_blank" rel="noopener noreferrer">
         <img src="https://jonhjortur.com/images/projects/jonhjorturDotCom.png" alt="Úbs. Hér á að vera mynd!" style={{ width: "100%"}}/>
         </a>
       </CardBody>

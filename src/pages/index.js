@@ -7,11 +7,8 @@ import { Row, Col } from 'reactstrap'
 import Sidebar from '../components/Sidebar'
 
 const IndexPage = () => (
-  <Layout>
+  <Layout pageTitle="">
     <SEO title="Home" keywords={[`/*WHAT TO PUT HERE!!?*/`]} />
-    <h1>Rosalega flott síða!</h1>
-    <Row>
-      <Col md='8'>
       <StaticQuery
       query={indexQuery}
       render={data => {
@@ -33,11 +30,6 @@ const IndexPage = () => (
         )
       }}
     />
-      </Col>
-      <Col md='4'>
-        <Sidebar/>
-      </Col>
-    </Row>
   </Layout>
 )
 

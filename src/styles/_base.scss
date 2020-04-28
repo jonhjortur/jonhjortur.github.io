@@ -1,5 +1,5 @@
 .container#content {
-  margin-top: 60px;
+  margin-top: 4rem;
 }
 body {
   background-color: $light-gray;
@@ -37,9 +37,11 @@ ul {
   padding: 0;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.btn-center {
+  xdisplay: block;
+  align-content: center;
+  xposition: relative;
+  xmargin-left: auto;
+  xmargin-right: auto;
   xwidth: 50%;
 }

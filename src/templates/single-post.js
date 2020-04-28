@@ -10,22 +10,19 @@ import { slugify, youtubeId } from "../utils/utilFuncs"
 const SinglePost = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   return (
-    <Layout>
+    <Layout pageTitle={''/*post.title*/}>
       <SEO title={post.title}/>
-      <h1>{post.title}</h1>
-      <Row>
-        <Col md="8">
           <Card>
             <Img
               className="card-image-top"
               fluid={post.image.childImageSharp.fluid}
             />
             <CardBody>
-              <div class="iframe-container">
+              <div class="iframe-container" >
                 <iframe
-                  src={`https://www.youtube.com/embed/${youtubeId(post.youtube)}`} //Þessi lína er áfangi í lífi mínu !! Ekkert minna !!!
+                  src={`https://www.youtube.com/embed/${youtubeId(post.youtube)}`}
                   frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   allowfullscreen
                 ></iframe>
               </div>
@@ -47,11 +44,6 @@ const SinglePost = ({ data }) => {
               </ul>
             </CardBody>
           </Card>
-        </Col>
-        <Col md="4">
-          <Sidebar />
-        </Col>
-      </Row>
     </Layout>
   )
 }

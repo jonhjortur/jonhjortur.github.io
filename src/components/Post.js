@@ -10,6 +10,7 @@ import {
 } from "reactstrap"
 import Img from "gatsby-image"
 import { slugify } from "../utils/utilFuncs"
+
 const Post = ({ title, author, slug, date, body, fluid, tags }) => {
   return (
     <Card>
