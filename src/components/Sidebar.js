@@ -1,12 +1,65 @@
 import React from "react"
-import { Card, CardTitle, CardBody, Form, FormGroup, Input } from "reactstrap"
-import { graphql, StaticQuery, Link } from 'gatsby'
+import {
+  Card,
+  CardTitle,
+  CardBody,
+  CardText,
+  Form,
+  FormGroup,
+  Input,
+} from "reactstrap"
+import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/index.scss"
 
-const Sidebar = () => (
+const Sidebar = ({ author, authorFluid }) => (
   <div>
-   {/* <Card>
+    {author && (
+      <Card>
+        <Img className="card-image-top" fluid={authorFluid} />
+        <CardBody>
+          <CardTitle className="text-center text-uppercase mb-3">
+            {author.name}
+          </CardTitle>
+          <CardText>{author.bio}</CardText>
+          <div className="author-social-links text-center">
+            <ul>
+              <li>
+                <a
+                  href={author.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="facebook"
+                >
+                  <i className="fab fa-facebook-f fa-larger"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="twitter"
+                >
+                  <i className="fab fa-twitter fa-larger"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github"
+                >
+                  <i className="fab fa-github fa-larger"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
+    )}
+    {/* <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
           Fáðu tilkynningar...eða contact-form...eða ekkert
@@ -23,11 +76,17 @@ const Sidebar = () => (
     </Card>  */}
     <Card>
       <CardBody>
-        <CardTitle className="text-center text-uppercase">
-          Portfolio
-        </CardTitle>
-        <a href="https://jonhjortur.com/" target="_blank" rel="noopener noreferrer">
-        <img src="https://jonhjortur.com/images/projects/jonhjorturDotCom.png" alt="Úbs. Hér á að vera mynd!" style={{ width: "100%"}}/>
+        <CardTitle className="text-center text-uppercase">Portfolio</CardTitle>
+        <a
+          href="https://jonhjortur.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://jonhjortur.com/images/projects/jonhjorturDotCom.png"
+            alt="Úbs. Hér á að vera mynd!"
+            style={{ width: "100%" }}
+          />
         </a>
       </CardBody>
     </Card>
@@ -36,24 +95,30 @@ const Sidebar = () => (
         <CardTitle className="text-center text-uppercase mb-3">
           Nýjasta...UUuuu
         </CardTitle>
-        <StaticQuery query={sidebarQuery} render={(data) => (
-          <div>
-            {data.allMarkdownRemark.edges.map(({node}) => (
-              <Card key={node.id}>
-                <Link to={node.fields.slug}>
-                  <Img className="card-image-top" fluid={node.frontmatter.image.childImageSharp.fluid}/>
-                </Link>
-                <CardBody>
-                  <CardTitle>
-                    <Link to={node.fields.slug}>
-                      {node.frontmatter.title}
-                    </Link>
-                  </CardTitle>
-                </CardBody>
-              </Card>
-            ))}
-          </div>
-        )}/>
+        <StaticQuery
+          query={sidebarQuery}
+          render={data => (
+            <div>
+              {data.allMarkdownRemark.edges.map(({ node }) => (
+                <Card key={node.id}>
+                  <Link to={node.fields.slug}>
+                    <Img
+                      className="card-image-top"
+                      fluid={node.frontmatter.image.childImageSharp.fluid}
+                    />
+                  </Link>
+                  <CardBody>
+                    <CardTitle>
+                      <Link to={node.fields.slug}>
+                        {node.frontmatter.title}
+                      </Link>
+                    </CardTitle>
+                  </CardBody>
+                </Card>
+              ))}
+            </div>
+          )}
+        />
       </CardBody>
     </Card>
   </div>
@@ -61,8 +126,8 @@ const Sidebar = () => (
 
 const sidebarQuery = graphql`
   query sidebarQuery {
-    allMarkdownRemark (
-      sort: { fields: [frontmatter___date], order: DESC}
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
       limit: 3
     ) {
       edges {

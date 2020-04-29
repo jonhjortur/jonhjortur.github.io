@@ -26,7 +26,14 @@
         &.linkedin:hover {
           color: rgb(0, 119, 181);
         }
+        &.github:hover {
+          color: rgb(173, 92, 81);
+        }
       }
     }
   }
+}
+
+.fa-larger {
+  font-size: 2em;
 }

@@ -26,17 +26,17 @@ const Footer = () => (
             <i class="fab fa-twitter fa-2x"></i>
           </a>
         </li>
-        {/*<li>
+        <li>
           <a
             href="https://stallman.org/facebook.html"
             target="_blank"
             rel="noopener noreferrer"
             className="google"
           >
-            <i class="fab fa-google fa-2x"></i>
+            <i class="fab fa-github fa-2x"></i>
           </a>
         </li>
-        <li>
+        {/*<li>
           <a
             href="https://stallman.org/facebook.html"
             target="_blank"
