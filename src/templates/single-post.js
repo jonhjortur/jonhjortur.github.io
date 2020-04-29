@@ -14,7 +14,7 @@ const SinglePost = ({ data }) => {
   const author = authors.find(x => x.name === post.author)
   return (
     <Layout
-      pageTitle={"" /*post.title*/}
+      pageTitle={post.title}
       postAuthor={author}
       authorImageFluid={data.file.childImageSharp.fluid}
     >
@@ -23,7 +23,7 @@ const SinglePost = ({ data }) => {
         <Img
           className="card-image-top"
           fluid={post.image.childImageSharp.fluid}
-        />
+          />
         <CardBody>
           <div class="iframe-container">
             <iframe
@@ -31,7 +31,7 @@ const SinglePost = ({ data }) => {
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
               allowfullscreen
-            ></iframe>
+              ></iframe>
           </div>
           <CardSubtitle>
             <span className="text-info">{post.date}</span> -{" "}
