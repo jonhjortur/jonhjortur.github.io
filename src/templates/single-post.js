@@ -8,6 +8,7 @@ import Img from "gatsby-image"
 import { slugify, youtubeId } from "../utils/utilFuncs"
 import authors from "../utils/authors"
 import { node } from "prop-types"
+import { Helmet } from "react-helmet"
 
 const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
@@ -18,10 +19,13 @@ const SinglePost = ({ data, pageContext }) => {
 
   return (
     <Layout
-      pageTitle={post.title}
-      postAuthor={author}
-      authorImageFluid={data.file.childImageSharp.fluid}
+    pageTitle={post.title}
+    postAuthor={author}
+    authorImageFluid={data.file.childImageSharp.fluid}
     >
+    <Helmet>
+      <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5eaa1c404ba4f9001384ca59&product=inline-share-buttons" async="async"></script>
+    </Helmet>
       <SEO title={post.title} />
       <Card>
         <Img
@@ -87,6 +91,9 @@ const SinglePost = ({ data, pageContext }) => {
             >
               <i className="fab fa-twitter fa-2x"></i>
             </a>
+          </li>
+          <li>
+          <div class="sharethis-inline-share-buttons"></div>
           </li>
         </ul>
       </div>
