@@ -8,6 +8,10 @@ tags:
   - JavaScript
   - Computer science
   - Web development
+  - B
+  - F#
+  - XML
+  - ZIP
 ---
 
 Regular YouTube URL
