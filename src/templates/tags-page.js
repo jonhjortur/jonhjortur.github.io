@@ -13,17 +13,33 @@ const tagsPage = ({ pageContext }) => {
         keywords={["tags", "topics", "efnisatriði", "subjects"]}
       />
       {/*Ég á alveg örugglega eftir að nenna að færa þessa inline-styles seinna. Já já, ekki spurning! Humm!! */}
-        <ul style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
-          {tags.map(tag => (
-            <li key={tag} style={{ margin: "5px"}}>
-              <Button style={{fontSize: "26px"}} color="primary" href={`/tag/${slugify(tag)}`}>
-                {tag} <Badge color="light">{tagPostCounts[tag]}</Badge>
-              </Button>
-            </li>
-          ))}
-        </ul>
+      <ul style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+        {tags.map(tag => (
+          <li key={tag} style={{ margin: "5px" }}>
+            <Button
+              style={{ fontSize: "22px" }}
+              color="primary"
+              href={`/tag/${slugify(tag)}`}
+            >
+              {newFunction(tag)}{" "}
+              <Badge color="light">{tagPostCounts[tag]}</Badge>
+            </Button>
+          </li>
+        ))}
+      </ul>
     </Layout>
   )
 }
 
 export default tagsPage
+function newFunction(tag) {
+  if (tag === "Java") {
+    return (
+      <i class="fab fa fa-blind fa-2x">
+        <span> {tag}</span>
+      </i>
+    )
+  } else {
+    return tag
+  }
+}
