@@ -35,7 +35,7 @@ const Layout = ({ children, pageTitle, authorImageFluid, postAuthor }) => (
               {/*Því ég var að spá í að hafa titilinn bara yfir vinstri dálkinum...kannski?? */}
             </Col>
           </Row>
-              <h1>{pageTitle}</h1>
+          <h1>{pageTitle}</h1>
           <Row md="11">
             <Col md="8">{children}</Col>
             <Col md="4">
