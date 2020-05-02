@@ -7,7 +7,7 @@ import { slugify } from "../utils/utilFuncs"
 const tagsPage = ({ pageContext }) => {
   const { tags, tagPostCounts } = pageContext
   return (
-    <Layout pageTitle="Some tags">
+    <Layout pageTitle="">
       <SEO
         title="All tags"
         keywords={["tags", "topics", "efnisatriði", "subjects"]}
@@ -21,7 +21,7 @@ const tagsPage = ({ pageContext }) => {
               color="primary"
               href={`/tag/${slugify(tag)}`}
             >
-              {newFunction(tag)}{" "}
+              {tag}{" "}
               <Badge color="light">{tagPostCounts[tag]}</Badge>
             </Button>
           </li>

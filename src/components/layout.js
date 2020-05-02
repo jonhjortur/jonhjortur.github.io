@@ -9,7 +9,7 @@ import Sidebar from "./Sidebar"
 
 import { Row, Col } from "reactstrap"
 
-const Layout = ({ children, pageTitle, authorImageFluid, postAuthor }) => (
+const Layout = ({ children, pageTitle, widePageTitle, authorImageFluid, postAuthor }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -33,11 +33,12 @@ const Layout = ({ children, pageTitle, authorImageFluid, postAuthor }) => (
           <Row md="1">
             <Col md="8">
               {/*Því ég var að spá í að hafa titilinn bara yfir vinstri dálkinum...kannski?? */}
+              <h1>{pageTitle}</h1>
             </Col>
           </Row>
-          <h1>{pageTitle}</h1>
-          <Row md="11">
-            <Col md="8">{children}</Col>
+          <h1>{widePageTitle}</h1>
+          <Row md="11" className="title-margin">
+            <Col md="8">{children} </Col>
             <Col md="4">
               <Sidebar author={postAuthor} authorFluid={authorImageFluid} />
             </Col>

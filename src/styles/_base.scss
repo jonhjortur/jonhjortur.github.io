@@ -15,10 +15,12 @@ body {
   font-family: $site-font;
 }
 h1, h2 {
-  margin-bottom: 20px;
+  margin: 0px;
   text-align: center;
 }
-
+.title-margin {
+  margin-top: 20px;
+}
 .navbar {
   background-color: white;
   // border-right: 1px solid rgba(0, 0, 0, 0.4);

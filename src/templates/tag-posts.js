@@ -11,7 +11,7 @@ const tagPosts = ({ data, pageContext }) => {
   
   const pageHeader = `${numToString(totalCount)} ${totalCount === 1 ? " færsla merkt " : " færslur merktar "} ${ tag }`
   return (
-    <Layout pageTitle={pageHeader}>
+    <Layout widePageTitle={pageHeader}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post
         key={node.id}
