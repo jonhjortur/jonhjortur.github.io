@@ -33,13 +33,13 @@ class Header extends React.Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/team">Team</NavLink>
+                  <NavLink href="/tags">Efnisatriði</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/tags">Tags</NavLink>
+                  <NavLink href="/team">Um mig</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/about">About</NavLink>
+                  <NavLink href="/about">Um þessa síðu</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

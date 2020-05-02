@@ -32,9 +32,10 @@ const Layout = ({ children, pageTitle, authorImageFluid, postAuthor }) => (
         <div className="container" id="content">
           <Row md="1">
             <Col md="8">
-              <h1>{pageTitle}</h1>
+              {/*Því ég var að spá í að hafa titilinn bara yfir vinstri dálkinum...kannski?? */}
             </Col>
           </Row>
+              <h1>{pageTitle}</h1>
           <Row md="11">
             <Col md="8">{children}</Col>
             <Col md="4">
