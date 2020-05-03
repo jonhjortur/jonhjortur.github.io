@@ -33,10 +33,10 @@ const Layout = ({ children, pageTitle, widePageTitle, authorImageFluid, postAuth
           <Row md="1">
             <Col md="8">
               {/*Því ég var að spá í að hafa titilinn bara yfir vinstri dálkinum...kannski?? */}
-              <h1>{pageTitle}</h1>
+              <h2>{pageTitle}</h2>
             </Col>
           </Row>
-          <h1>{widePageTitle}</h1>
+          <h2>{widePageTitle}</h2>
           <Row md="11" className="title-margin">
             <Col md="8">{children} </Col>
             <Col md="4">

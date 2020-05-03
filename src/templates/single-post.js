@@ -25,6 +25,9 @@ const SinglePost = ({ data, pageContext }) => {
     >
     <Helmet>
       <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5eaa1c404ba4f9001384ca59&product=inline-share-buttons" async="async"></script>
+      {/* https://github.com/googlearchive/code-prettify */}
+      <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
     </Helmet>
       <SEO title={post.title} />
       <Card>
