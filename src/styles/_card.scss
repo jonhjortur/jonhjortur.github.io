@@ -4,10 +4,10 @@
 ul.post-tags {
   padding: 0;
   display: inline-flex;
+  flex-wrap: wrap;
   list-style: none;
-
+  
   li {
     margin-right: 10px;
   }
-  
 }
