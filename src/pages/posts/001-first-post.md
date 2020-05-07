@@ -1,17 +1,33 @@
 ---
-title: "Introduction to JavaScript"
-youtube: "https://www.youtube.com/watch?v=VGf9PTYyJ4A"
-date: 2020-5-12 07:00:00
+title: 'forritun/python/1/helloWorld.py'
+youtube: "https://www.youtube.com/embed/1Kh0kv9gHCg"
+date: 2048-5-12 07:00:00
 author: "Jón Hjörtur"
-image: ../../images/testThumbJS1.jpg
+image: ../../images/testThumbPython1.jpg
 tags:
-  - JavaScript frá grunni
-  - Tölvunarfræði
+  - Kennsla
+  - Forritun
+  - Python
 ---
-<?prettify?>
+
+Fyrsta myndbandið í röð kennslumyndbanda um Python mun birtast hér fljótlega eftir að COVID-vesenið er búið og ég kemst í upptökuaðstöðuna.
+
+__This is some code:__
+<?prettify ...?>
+<pre class="prettyprint lang-py linenums">
+  for letter in 'Python':     # traversal of a string sequence
+    print ('Current Letter :', letter)
+  print()
+  fruits = ['banana', 'apple',  'mango']
+
+  for fruit in fruits:        # traversal of List sequence
+    print ('Current fruit :', fruit)
+
+  print ("Good bye!")
+</pre>
+
+__This is some more stuff:__
 <pre class="prettyprint lang-js linenums">
-<code>
-class Voila {
   const slugify = function (text) {
     return text
       .toString()
@@ -23,13 +39,12 @@ class Voila {
       .replace(/^-+/, "") // Trim - from start of text
       .replace(/-+$/, "") // Trim - from end of text
   }
-
-  // Næstum alveg stolið héðan: https://stackoverflow.com/questions/3452546/how-do-i-get-the-youtube-video-id-from-a-url
-  function youtubeId(url) {
-    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/
-    var match = url.match(regExp)
-    return match && match[7].length === 11 ? match[7] : false
-  }
-}
-</code>
 </pre>
+asdf asdf asdf asdf asdf 
+
+__Hlekkir:__
+
+Forritunarumhverfið:
+<a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>
+  
+  

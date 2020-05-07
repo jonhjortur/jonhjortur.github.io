@@ -5,10 +5,11 @@ import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 import { Row, Col, Card, CardBody, CardSubtitle, Badge } from "reactstrap"
 import Img from "gatsby-image"
-import { slugify, youtubeId, hideIframe } from "../utils/utilFuncs"
+import { slugify, youtubeId } from "../utils/utilFuncs"
 import authors from "../utils/authors"
 import { node } from "prop-types"
 import { Helmet } from "react-helmet"
+import "../styles/index.scss"
 
 const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
@@ -50,8 +51,11 @@ const SinglePost = ({ data, pageContext }) => {
             </div>
           )}
           <CardSubtitle>
+            <div className="post-date-author-margin">
             <span className="text-info">{post.date}</span> -{" "}
             <span className="text-info">{post.author}</span>
+
+            </div>
           </CardSubtitle>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <ul className="post-tags">
@@ -91,7 +95,7 @@ const SinglePost = ({ data, pageContext }) => {
                 "&text=" +
                 post.title +
                 "&via" +
-                "twitterHandle" // My twitter handle...when I get one!
+                "twitterHandle" // My twitter handle...if I get one!
               }
               className="twitter"
               target="_blank"
