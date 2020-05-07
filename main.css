@@ -1,3 +1,25 @@
-img {
-  width: 100vw;
+body {
+  background: #333 url('images/termBackDark.png') no-repeat center center / cover;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  width: 40%;
+}
+
+img:hover {
+  
+  animation: turn 4s
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
