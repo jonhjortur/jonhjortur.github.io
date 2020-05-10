@@ -1,6 +1,6 @@
 const { slugify } = require("./src/utils/utilFuncs")
 const path = require("path")
-const authors = require("./src/utils/authors")
+const courses = require("./src/utils/courses")
 const _ = require("lodash")
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -23,7 +23,7 @@ exports.createPages = ({ actions, graphql }) => {
     tagsPage: path.resolve("src/templates/tags-page.js"),
     tagPosts: path.resolve('src/templates/tag-posts.js'),
     postList: path.resolve('src/templates/post-list.js'),
-    authorPosts: path.resolve('src/templates/author-posts.js')
+    coursePosts: path.resolve('src/templates/course-posts.js')
   }
   return graphql(`
     {
@@ -31,7 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
-              author
+              course
               tags
             }
             fields {
@@ -54,8 +54,8 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           // Passing slug for template to use to get post
           slug: node.fields.slug,
-          // Find author imageUrl from authors and pass to the single post template
-          imageUrl: authors.find(x => x.name === node.frontmatter.author)
+          // Find course imageUrl from courses and pass to the single post template
+          imageUrl: courses.find(x => x.name === node.frontmatter.course)
             .imageUrl,
         },
       })
@@ -118,13 +118,13 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
-    authors.forEach(author => {
+    courses.forEach(course => {
       createPage({
-        path: `/author/${slugify(author.name)}`,
-        component: templates.authorPosts,
+        path: `/course/${slugify(course.name)}`,
+        component: templates.coursePosts,
         context: {
-          authorName: author.name,
-          imageUrl: author.imageUrl
+          courseName: course.name,
+          imageUrl: course.imageUrl
         }
       })
     })

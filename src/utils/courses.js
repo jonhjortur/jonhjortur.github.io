@@ -1,4 +1,4 @@
-const authors = [
+const courses = [
   {
     name: "Python",
     imageUrl: "lenin.jpg",
@@ -10,7 +10,7 @@ const authors = [
     personalWebsite: "https://www.jonhjortur.com/",
   },
   {
-    name: "Saga Gná",
+    name: "C++",
     imageUrl: "castro.jpg",
     bio:
       "Saga hefur áralanga reynslu af stjórnun og markmiðasetningu og hefur náð árangir sem tekið hefur verið eftir um allan heim",
@@ -21,4 +21,4 @@ const authors = [
   },
 ]
 
-module.exports = authors
+module.exports = courses

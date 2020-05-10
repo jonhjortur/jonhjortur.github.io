@@ -2,7 +2,7 @@
 title: ""
 youtube: ""
 date: 2020-xx-xx
-author: "Jón Hjörtur"
+course: "Jón Hjörtur"
 image: 
 tags:
   - 

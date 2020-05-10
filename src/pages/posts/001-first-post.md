@@ -2,7 +2,7 @@
 title: 'forritun/python/1/helloWorld.py'
 youtube: "https://www.youtube.com/embed/1Kh0kv9gHCg"
 date: 2048-5-12 07:00:00
-author: "Python"
+course: "Python"
 image: ../../images/testThumbPython1.jpg
 tags:
   - Kennsla

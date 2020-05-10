@@ -15,7 +15,7 @@ const postList = props => {
           key={node.id}
           slug={node.fields.slug}
           title={node.frontmatter.title}
-          author={node.frontmatter.author}
+          course={node.frontmatter.course}
           date={node.frontmatter.date}
           body={node.excerpt}
           tags={node.frontmatter.tags}
@@ -41,7 +41,7 @@ export const postListQuery = graphql`
           frontmatter {
             title
             date(formatString: "D/M/YYYY")
-            author
+            course
             tags
             image {
               childImageSharp {

@@ -6,14 +6,14 @@ import SEO from "../components/seo"
 import { Row, Col, Card, CardBody, CardSubtitle, Badge } from "reactstrap"
 import Img from "gatsby-image"
 import { slugify, youtubeId } from "../utils/utilFuncs"
-import authors from "../utils/authors"
+import courses from "../utils/courses"
 import { node } from "prop-types"
 import { Helmet } from "react-helmet"
 import "../styles/index.scss"
 
 const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
-  const author = authors.find(x => x.name === post.author)
+  const course = courses.find(x => x.name === post.course)
 
   const baseUrl = "https://www.jonhjortur.com/"
   const testing_baseUrl = "http://localhost:8000/"
@@ -21,8 +21,8 @@ const SinglePost = ({ data, pageContext }) => {
   return (
     <Layout
       pageTitle={post.title}
-      postAuthor={author}
-      authorImageFluid={data.file.childImageSharp.fluid}
+      postcourse={course}
+      courseImageFluid={data.file.childImageSharp.fluid}
     >
       <Helmet>
         <script
@@ -51,9 +51,9 @@ const SinglePost = ({ data, pageContext }) => {
             </div>
           )}
           <CardSubtitle>
-            <div className="post-date-author-margin">
+            <div className="post-date-course-margin">
             <span className="text-info">{post.date}</span> -{" "}
-            <span className="text-info">{post.author}</span>
+            <span className="text-info">{post.course}</span>
 
             </div>
           </CardSubtitle>
@@ -120,7 +120,7 @@ export const postQuery = graphql`
       html
       frontmatter {
         title
-        author
+        course
         youtube
         date(formatString: "D/M/YYYY")
         tags

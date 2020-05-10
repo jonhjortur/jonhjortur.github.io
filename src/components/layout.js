@@ -9,7 +9,7 @@ import Sidebar from "./Sidebar"
 
 import { Row, Col } from "reactstrap"
 
-const Layout = ({ children, pageTitle, widePageTitle, authorImageFluid, postAuthor }) => (
+const Layout = ({ children, pageTitle, widePageTitle, courseImageFluid, postCourse }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -40,7 +40,7 @@ const Layout = ({ children, pageTitle, widePageTitle, authorImageFluid, postAuth
           <Row md="11" className="title-margin">
             <Col md="8">{children} </Col>
             <Col md="4">
-              <Sidebar author={postAuthor} authorFluid={authorImageFluid} />
+              <Sidebar course={postCourse} courseFluid={courseImageFluid} />
             </Col>
           </Row>
         </div>

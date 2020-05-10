@@ -2,7 +2,7 @@
 title: "JavaScript frá grunni"
 youtube: ""
 date: 2020-12-02 07:00:00
-author: "Saga Gná"
+course: "C++"
 image: ../../images/testThumbCpp1.png
 tags:
   - Kennsla

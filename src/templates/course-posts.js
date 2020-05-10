@@ -2,23 +2,23 @@ import React from 'react'
 import Layout from '../components/layout'
 import Post from '../components/Post'
 import { graphql } from 'gatsby'
-import authors from '../utils/authors'
+import courses from '../utils/courses'
 
-const authorsPosts = ({ data, pageContext }) => {
+const coursesPosts = ({ data, pageContext }) => {
   const { totalCount } = data.allMarkdownRemark
-  const author = authors.find(x => x.name === pageContext.authorName)
-  const pageHeader = `Allt um ${pageContext.authorName}`
+  const course = courses.find(x => x.name === pageContext.courseName)
+  const pageHeader = `Allt um ${pageContext.courseName}`
 
   return (
     <Layout pageTitle={pageHeader}
-      postAuthor={author}
-      authorImageFluid={data.file.childImageSharp.fluid}>
+      postCourse={course}
+      courseImageFluid={data.file.childImageSharp.fluid}>
       {data.allMarkdownRemark.edges.map(({node}) => (
                 <Post
                 key={node.id}
                 slug={node.fields.slug}
                 title={node.frontmatter.title}
-                author={node.frontmatter.author}
+                course={node.frontmatter.course}
                 date={node.frontmatter.date}
                 body={node.excerpt}
                 tags={node.frontmatter.tags}
@@ -29,11 +29,11 @@ const authorsPosts = ({ data, pageContext }) => {
   )
 }
 
-export const authorsQuery = graphql`
-  query($authorName: String! $imageUrl: String!) {
+export const coursesQuery = graphql`
+  query($courseName: String! $imageUrl: String!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { author: {eq: $authorName}}}
+      filter: { frontmatter: { course: {eq: $courseName}}}
     ) {
       totalCount
       edges{
@@ -42,7 +42,7 @@ export const authorsQuery = graphql`
           frontmatter{
             title
             date(formatString: "D/M/YYYY")
-            author
+            course
             tags
             image{
               childImageSharp {
@@ -69,4 +69,4 @@ export const authorsQuery = graphql`
   }
 `
 
-export default authorsPosts
+export default coursesPosts

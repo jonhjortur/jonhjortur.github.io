@@ -12,21 +12,21 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/index.scss"
 
-const Sidebar = ({ author, authorFluid }) => (
+const Sidebar = ({ course, courseFluid }) => (
   <div>
-    {/* {author && (
+    {/* {course && (
       <Card>
-        <Img className="card-image-top" fluid={authorFluid} />
+        <Img className="card-image-top" fluid={courseFluid} />
         <CardBody>
           <CardTitle className="text-center text-uppercase mb-3">
-            {author.name}
+            {course.name}
           </CardTitle>
-          <CardText>{author.bio}</CardText>
-          <div className="author-social-links text-center">
+          <CardText>{course.bio}</CardText>
+          <div className="course-social-links text-center">
             <ul>
               <li>
                 <a
-                  href={author.facebook}
+                  href={course.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="facebook"
@@ -36,7 +36,7 @@ const Sidebar = ({ author, authorFluid }) => (
               </li>
               <li>
                 <a
-                  href={author.twitter}
+                  href={course.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="twitter"
@@ -46,7 +46,7 @@ const Sidebar = ({ author, authorFluid }) => (
               </li>
               <li>
                 <a
-                  href={author.github}
+                  href={course.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="github"
