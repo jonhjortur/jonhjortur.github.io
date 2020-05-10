@@ -14,7 +14,7 @@ import "../styles/index.scss"
 
 const Sidebar = ({ author, authorFluid }) => (
   <div>
-    {author && (
+    {/* {author && (
       <Card>
         <Img className="card-image-top" fluid={authorFluid} />
         <CardBody>
@@ -58,7 +58,7 @@ const Sidebar = ({ author, authorFluid }) => (
           </div>
         </CardBody>
       </Card>
-    )}
+    )} */}
     {/* <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
@@ -83,7 +83,7 @@ const Sidebar = ({ author, authorFluid }) => (
           rel="noopener noreferrer"
         >
           <img
-            src="https://jonhjortur.com/images/projects/jonhjorturDotCom.png"
+            src="https://portfolio.jonhjortur.com/images/projects/jonhjorturDotCom.png"
             alt="Úbs. Hér á að vera mynd!"
             style={{ width: "100%" }}
           />

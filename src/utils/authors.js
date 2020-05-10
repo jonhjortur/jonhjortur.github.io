@@ -1,9 +1,9 @@
 const authors = [
   {
-    name: "Jón Hjörtur",
+    name: "Python",
     imageUrl: "lenin.jpg",
     bio:
-      "Jón Hjörtur er tölvunarfræðingur og ég veit ekki hvað og hvað...hvað?",
+      "Jón Hjörtur er tölvunarfræðingur og ég veit ekki hvað og hvað...hvað?Jón Hjörtur er tölvunarfræðingur og ég veit ekki hvað og hvað...hvað?",
     facebook: "https://www.facebook.com/",
     twitter: "https://www.twitter.com/",
     github: "https://www.github.com/",
