@@ -173,7 +173,7 @@ function numToString(num) {
 
     if (num >= 90 && num < 100) {
       str = "Níutíu"
-      tmpNum -= 20
+      tmpNum -= 90
     }
 
     // Viðbót á milli 100 og 1000

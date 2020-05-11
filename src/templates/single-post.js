@@ -16,13 +16,12 @@ const SinglePost = ({ data, pageContext }) => {
   const course = courses.find(x => x.name === post.course)
 
   const baseUrl = "https://www.jonhjortur.com/"
-  const testing_baseUrl = "http://localhost:8000/"
 
   return (
     <Layout
       pageTitle={post.title}
       postcourse={course}
-      courseImageFluid={data.file.childImageSharp.fluid}
+      // courseImageFluid={data.file.childImageSharp.fluid}
     >
       <Helmet>
         <script
@@ -114,7 +113,7 @@ const SinglePost = ({ data, pageContext }) => {
 }
 
 export const postQuery = graphql`
-  query blogPostBySlug($slug: String!, $imageUrl: String!) {
+  query blogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
@@ -131,13 +130,6 @@ export const postQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
-        }
-      }
-    }
-    file(relativePath: { eq: $imageUrl }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
         }
       }
     }

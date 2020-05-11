@@ -11,7 +11,7 @@ const tagPosts = ({ data, pageContext }) => {
   
   const pageHeader = `${numToString(totalCount)} ${totalCount === 1 ? " færsla merkt " : " færslur merktar "} ${ tag }`
   return (
-    <Layout widePageTitle={pageHeader}>
+    <Layout pageTitle={pageHeader}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post
         key={node.id}
@@ -28,7 +28,7 @@ const tagPosts = ({ data, pageContext }) => {
   )
 }
 
-// Just learn that I dpn't need to name the queries !!
+// Just learn that I don't need to name the queries !!
 export const tagQuery = graphql`
   query($tag: String!) {
     allMarkdownRemark(

@@ -7,12 +7,14 @@ import courses from '../utils/courses'
 const coursesPosts = ({ data, pageContext }) => {
   const { totalCount } = data.allMarkdownRemark
   const course = courses.find(x => x.name === pageContext.courseName)
-  const pageHeader = `Allt um ${pageContext.courseName}`
+  const pageHeader = pageContext.courseName
+  {console.log("funk this ", course)}
 
   return (
     <Layout pageTitle={pageHeader}
       postCourse={course}
-      courseImageFluid={data.file.childImageSharp.fluid}>
+      // courseImageFluid={data.file.childImageSharp.fluid}
+      >
       {data.allMarkdownRemark.edges.map(({node}) => (
                 <Post
                 key={node.id}
@@ -28,9 +30,8 @@ const coursesPosts = ({ data, pageContext }) => {
     </Layout>
   )
 }
-
 export const coursesQuery = graphql`
-  query($courseName: String! $imageUrl: String!) {
+  query($courseName: String!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { course: {eq: $courseName}}}
@@ -56,13 +57,6 @@ export const coursesQuery = graphql`
             slug
           }
           excerpt
-        }
-      }
-    }
-    file(relativePath: { eq: $imageUrl }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
         }
       }
     }

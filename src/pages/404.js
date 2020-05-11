@@ -4,11 +4,15 @@ import SEO from "../components/seo"
 import "../styles/index.scss"
 import pic404 from "../images/404.jpg"
 import { Link } from "gatsby"
+import { Card } from "reactstrap"
 
 const NotFoundPage = () => (
-  <Layout pageTitle="Oups..">
+  <Layout pageTitle="">
     <SEO title="404: Not found" keywords={[`/*WHAT TO PUT HERE!!?*/`]}/>
-    <Link className="btn btn-danger" to={'/'}>Forða mér.</Link>
+    <Card>
+    <img src={pic404} alt=""/>
+    </Card>
+    <Link style={{ float: "right" }} className="btn btn-danger" to={'/'}>Forða mér.</Link>
   </Layout>
 )
 

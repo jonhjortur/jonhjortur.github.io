@@ -32,14 +32,3 @@ const tagsPage = ({ pageContext }) => {
 }
 
 export default tagsPage
-function newFunction(tag) {
-  if (tag === "Java") {
-    return (
-      <i class="fab fa fa-blind fa-2x">
-        <span> {tag}</span>
-      </i>
-    )
-  } else {
-    return tag
-  }
-}

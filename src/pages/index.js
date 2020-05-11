@@ -13,7 +13,7 @@ const IndexPage = () => {
   let numberOfPages
   return (
     <Layout pageTitle="">
-      <SEO title="Home" keywords={[`/*WHAT TO PUT HERE!!?*/`]} />
+      <SEO title="Forsíða" keywords={[`/*WHAT TO PUT HERE!!?*/`]} />
       <StaticQuery
         query={indexQuery}
         render={data => {

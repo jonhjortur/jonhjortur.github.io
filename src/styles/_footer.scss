@@ -3,6 +3,12 @@
   margin-top: 20px;
   padding: 10px;
   text-align: center;
+  // display: flex;
+  // flex-direction: column;
+
+textarea,input {
+  // margin: 0px 5px 0px 5px;
+}
 
   .footer-social-links {
     text-align: center;
@@ -15,23 +21,14 @@
         a {
           color: $dark-gray;
 
-          &.instagram:hover {
-            color: #e95950;
-          }
           &.facebook:hover {
             color: rgb(66, 103, 178);
           }
           &.twitter:hover {
             color: rgb(56, 161, 243);
           }
-          &.google:hover {
-            color: rgb(221, 75, 57);
-          }
-          &.youtube:hover {
-            color: rgb(255, 0, 0);
-          }
           &.github:hover {
-            color: rgb(173, 92, 81);
+            color: rgb(255,192,203);
           }
         }
       }

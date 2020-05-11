@@ -1,23 +1,23 @@
+// Skipta um nafn á þessum file...eða hinum sem heitir það sama!
 const courses = [
   {
     name: "Python",
-    imageUrl: "lenin.jpg",
-    bio:
+    // imageUrl: "lenin.jpg",
+    desc:
       "Jón Hjörtur er tölvunarfræðingur og ég veit ekki hvað og hvað...hvað?Jón Hjörtur er tölvunarfræðingur og ég veit ekki hvað og hvað...hvað?",
-    facebook: "https://www.facebook.com/",
-    twitter: "https://www.twitter.com/",
-    github: "https://www.github.com/",
-    personalWebsite: "https://www.jonhjortur.com/",
+
   },
   {
     name: "C++",
-    imageUrl: "castro.jpg",
-    bio:
-      "Saga hefur áralanga reynslu af stjórnun og markmiðasetningu og hefur náð árangir sem tekið hefur verið eftir um allan heim",
-    facebook: "https://www.facebook.com/",
-    twitter: "https://www.twitter.com/",
-    github: "https://www.github.com/",
-    personalWebsite: "https://www.jonhjortur.com/",
+    // imageUrl: "castro.jpg",
+    desc:
+      "SaHeklaa hefur áralanga reynslu af stjórnun og markmiðasetningu og hefur náð árangir sem tekið hefur verið eftir um allan heim",
+  },
+  {
+    name: "Rant",
+    // imageUrl: "castro.jpg",
+    desc:
+      "Einhver tilviljanakennd atriði úr tölvunarfræði eða forritun.",
   },
 ]
 

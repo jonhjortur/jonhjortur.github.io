@@ -2,9 +2,10 @@ import React from "react"
 
 const Footer = () => (
   <div className="site-footer">
-    <h4 className="text-center">Kannski titill á síðunni?</h4>
-    <p className="text-center">Samfélagsmiðlar og ég veit ekki hvað...</p>
-    <div className="footer-social-links">
+    {/* <h4 className="text-center">Ekki að nota þetta</h4>
+    <p className="text-center">Ekki að nota þetta</p> */}
+    <p><img src="https://img.icons8.com/small/16/000000/copyleft.png"/> 2020 Jón Hjörtur - <a href="mailto:contact@jonhjortur.com.com">contact@jonhjortur.com</a></p>
+    {/* <div className="footer-social-links">
       <ul className="social-links-list">
         <li>
           <a
@@ -31,37 +32,13 @@ const Footer = () => (
             href="https://stallman.org/facebook.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="google"
-          >
-            <i class="fab fa-github fa-2x"></i>
-          </a>
-        </li>
-        {/*<li>
-          <a
-            href="https://stallman.org/facebook.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="youtube"
-          >
-            <i class="fab fa-youtube fa-2x"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://stallman.org/facebook.html"
-            target="_blank"
-            rel="noopener noreferrer"
             className="github"
           >
             <i class="fab fa-github fa-2x"></i>
           </a>
-        </li>*/}
-        {/*
-          https://stallman.org/google.html
-
-          */}
+        </li>
       </ul>
-    </div>
+    </div> */}
   </div>
 )
 

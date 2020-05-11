@@ -55,8 +55,8 @@ exports.createPages = ({ actions, graphql }) => {
           // Passing slug for template to use to get post
           slug: node.fields.slug,
           // Find course imageUrl from courses and pass to the single post template
-          imageUrl: courses.find(x => x.name === node.frontmatter.course)
-            .imageUrl,
+          // imageUrl: courses.find(x => x.name === node.frontmatter.course)
+          //   .imageUrl,
         },
       })
     })
@@ -124,7 +124,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: templates.coursePosts,
         context: {
           courseName: course.name,
-          imageUrl: course.imageUrl
+          // imageUrl: course.imageUrl
         }
       })
     })

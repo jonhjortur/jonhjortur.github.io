@@ -1,12 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
-
 import Header from "./header"
 import Footer from "./Footer"
 import "../styles/index.scss"
 import Sidebar from "./Sidebar"
-
 import { Row, Col } from "reactstrap"
 
 const Layout = ({ children, pageTitle, widePageTitle, courseImageFluid, postCourse }) => (
@@ -32,11 +30,10 @@ const Layout = ({ children, pageTitle, widePageTitle, courseImageFluid, postCour
         <div className="container" id="content">
           <Row md="1">
             <Col md="8">
-              {/*Því ég var að spá í að hafa titilinn bara yfir vinstri dálkinum...kannski?? */}
               <h2>{pageTitle}</h2>
             </Col>
           </Row>
-          <h2>{widePageTitle}</h2>
+          <h2>{widePageTitle}</h2> {/* Nota þetta kannski fyrir "Efnisatriði"...eða þar sem titillinn getur orðið mjög langur */}
           <Row md="11" className="title-margin">
             <Col md="8">{children} </Col>
             <Col md="4">

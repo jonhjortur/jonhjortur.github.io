@@ -1,5 +1,5 @@
 ---
-title: "JavaScript frá grunni"
+title: "JavaScript frá grunnix"
 youtube: ""
 date: 2020-12-02 07:00:00
 course: "C++"
