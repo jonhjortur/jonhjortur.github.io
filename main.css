@@ -9,11 +9,7 @@ body {
   margin-right: auto;
   margin-top: 10vh;
   width: 40%;
-}
-
-img:hover {
-  
-  animation: turn 4s
+  animation: turn 4s once;
 }
 
 @keyframes turn {
