@@ -56,7 +56,6 @@ const SinglePost = ({ data, pageContext }) => {
 
             </div>
           </CardSubtitle>
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <ul className="post-tags">
             {post.tags.map(tag => (
               <li key={tag}>
@@ -66,6 +65,7 @@ const SinglePost = ({ data, pageContext }) => {
               </li>
             ))}
           </ul>
+          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         </CardBody>
       </Card>
       <h3 className="text-center">Share this post</h3>
