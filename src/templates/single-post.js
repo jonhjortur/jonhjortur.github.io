@@ -1,13 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
-import Sidebar from "../components/Sidebar"
 import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
-import { Row, Col, Card, CardBody, CardSubtitle, Badge } from "reactstrap"
+import { Card, CardBody, CardSubtitle, Badge } from "reactstrap"
 import Img from "gatsby-image"
 import { slugify, youtubeId } from "../utils/utilFuncs"
-import courses from "../utils/courses"
-import { node } from "prop-types"
+import courses from "../utils/coursesDescription"
 import { Helmet } from "react-helmet"
 import "../styles/index.scss"
 
@@ -21,7 +19,6 @@ const SinglePost = ({ data, pageContext }) => {
     <Layout
       pageTitle={post.title}
       postcourse={course}
-      // courseImageFluid={data.file.childImageSharp.fluid}
     >
       <Helmet>
         <script
@@ -39,9 +36,10 @@ const SinglePost = ({ data, pageContext }) => {
           fluid={post.image.childImageSharp.fluid}
         />
         <CardBody>
-          {post.youtube != "" && (
+          {post.youtube !== "" && (
             <div class="iframe-container" id="hideMe">
               <iframe
+              title="YouTubeVideo"
                 src={`https://www.youtube.com/embed/${youtubeId(post.youtube)}`}
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"

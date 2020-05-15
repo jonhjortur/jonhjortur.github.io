@@ -1,4 +1,3 @@
-// Skipta um nafn á þessum file...eða hinum sem heitir það sama!
 const courses = [
   {
     name: "Python",

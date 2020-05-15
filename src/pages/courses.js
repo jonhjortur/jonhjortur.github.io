@@ -3,7 +3,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import courses from "../utils/courses"
+import courses from "../utils/coursesDescription"
 import { Row, Card, CardTitle, CardBody, CardText, Button } from "reactstrap"
 import { slugify } from "../utils/utilFuncs"
 

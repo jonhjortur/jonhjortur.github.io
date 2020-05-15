@@ -2,18 +2,17 @@ import React from 'react'
 import Layout from '../components/layout'
 import Post from '../components/Post'
 import { graphql } from 'gatsby'
-import courses from '../utils/courses'
+import courses from '../utils/coursesDescription'
 
 const coursesPosts = ({ data, pageContext }) => {
-  const { totalCount } = data.allMarkdownRemark
+  // Ef ég vil birta fjölda pósta í seríu, t.d. í hausnum
+  // const { totalCount } = data.allMarkdownRemark
   const course = courses.find(x => x.name === pageContext.courseName)
   const pageHeader = pageContext.courseName
-  {console.log("funk this ", course)}
 
   return (
     <Layout pageTitle={pageHeader}
       postCourse={course}
-      // courseImageFluid={data.file.childImageSharp.fluid}
       >
       {data.allMarkdownRemark.edges.map(({node}) => (
                 <Post

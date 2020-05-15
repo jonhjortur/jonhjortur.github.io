@@ -3,10 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, StaticQuery } from "gatsby"
 import Post from "../components/Post"
-import { Row, Col } from "reactstrap"
-import Sidebar from "../components/Sidebar"
 import PaginationLinks from "../components/paginationLinks"
-import { number } from "prop-types"
 
 const IndexPage = () => {
   const postsPerPage = 2

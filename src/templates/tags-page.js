@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Button, Badge, Col } from "reactstrap"
+import { Button, Badge } from "reactstrap"
 import { slugify } from "../utils/utilFuncs"
 
 const tagsPage = ({ pageContext }) => {

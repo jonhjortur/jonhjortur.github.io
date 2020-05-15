@@ -1,6 +1,6 @@
 const { slugify } = require("./src/utils/utilFuncs")
 const path = require("path")
-const courses = require("./src/utils/courses")
+const courses = require("./src/utils/coursesDescription")
 const _ = require("lodash")
 
 exports.onCreateNode = ({ node, actions }) => {

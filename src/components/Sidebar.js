@@ -3,11 +3,16 @@ import {
   Card,
   CardTitle,
   CardBody,
+  Row,
+  CardText,
 } from "reactstrap"
-import { graphql, StaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+// import { graphql, StaticQuery, Link } from "gatsby"
 import "../styles/index.scss"
 import portfolioThumb from "../images/portfolioThumbnail.png"
+import courses from "../utils/coursesDescription"
+import pyPic from "../images/testThumbPython1.jpg"
+import { slugify } from "../utils/utilFuncs"
+import rantPic from "../images/testThumbJS1.jpg"
 
 const Sidebar = () => (
   <div>
@@ -29,10 +34,47 @@ const Sidebar = () => (
     </Card>
     <Card>
       <CardBody>
+        {/* Þetta er harðkóðað og afritað úr courses.js sem er ekki fallegt.
+        En hvað ætlar þú að gera í því !!? HA!!?
+        "Ég á þetta, ég má þetta!!"
+        (En ég laga þetta nú samt seinna ef ég vil halda mig við að hafa þetta á þessum stað.)*/}
         <CardTitle className="text-center text-uppercase mb-3">
-          Nýjasta...UUuuu
+          Seríur
         </CardTitle>
-        <StaticQuery
+    <Row className="mb-6">
+      <div className="col-md-12" >
+        <Card style={{/* minHeight: '100%' */}}>
+        <a href={`/course/${slugify(courses[0].name)}`}>
+        <img src={pyPic} style={{ maxWidth: '100%'}} alt="PYTHON"/>
+        </a>
+          <CardBody>
+            <CardTitle className="text-info">{courses[0].name}</CardTitle>
+            <CardText>{courses[0].desc}</CardText>
+            {/* <Button className="text-uppercase" style={{ float: "right" }} color="primary" href={`/course/${slugify(courses[0].name)}`}>Læra {courses[0].name}</Button> */}
+          </CardBody>
+        </Card>
+      </div>
+      </Row>
+      <Row className="mb-6">
+        <div className="col-md-12" >
+          <Card style={{/* minHeight: '100%' */}}>
+          <a href={`/course/${slugify(courses[2].name)}`}>
+          <img src={rantPic} style={{ maxWidth: '100%'}} alt="PYTHON"/>
+          </a>
+            <CardBody>
+              <CardTitle className="text-info">{courses[2].name}</CardTitle>
+              <CardText>{courses[2].desc}</CardText>
+              {/* <Button className="text-uppercase" style={{ float: "right" }} color="primary" href={`/course/${slugify(courses[2].name)}`}>Læra {courses[2].name}</Button> */}
+            </CardBody>
+          </Card>
+        </div>
+      </Row>
+      {/* Þetta fyrir neðan er til að birta nýjustu færslurnar á síðunni.
+      Fannst þetta góð hugmynd til að byrja með en held að það sé betra að hafa seríurnar hér.
+      Það nýjasta er augljóslega alttaf fremst á síðunni hvort sem er og ég held að það sé ekki
+      mikið value í því fyrir notendur að hafa beinan aðgang að því nýjasta þó þeir séu komnir
+      nokkrum síðum aftar */}
+        {/* <StaticQuery
           query={sidebarQuery}
           render={data => (
             <div>
@@ -55,38 +97,38 @@ const Sidebar = () => (
               ))}
             </div>
           )}
-        />
+        /> */}
       </CardBody>
     </Card>
   </div>
 )
 
-const sidebarQuery = graphql`
-  query sidebarQuery {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`
+// const sidebarQuery = graphql`
+//   query sidebarQuery {
+//     allMarkdownRemark(
+//       sort: { fields: [frontmatter___date], order: DESC }
+//       limit: 5
+//     ) {
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 300) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//           fields {
+//             slug
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Sidebar
