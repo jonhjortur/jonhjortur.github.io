@@ -9,7 +9,7 @@ const tagsPage = ({ pageContext }) => {
   return (
     <Layout pageTitle="">
       <SEO
-        title="All tags"
+        title="Efnisatriði"
         keywords={["tags", "topics", "efnisatriði", "subjects"]}
       />
       {/*Ég á alveg örugglega eftir að nenna að færa þessa inline-styles seinna. Já já, ekki spurning! Humm!! */}
@@ -17,7 +17,7 @@ const tagsPage = ({ pageContext }) => {
         {tags.map(tag => (
           <li key={tag} style={{ margin: "5px" }}>
             <Button
-              style={{ fontSize: "22px" }}
+              // style={{ fontSize: "22px" }}
               color="primary"
               href={`/tag/${slugify(tag)}`}
             >

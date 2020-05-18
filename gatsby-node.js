@@ -98,7 +98,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    const postsPerPage = 2
+    const postsPerPage = 4
     const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numberOfPages }).forEach((_, index) => {
@@ -124,7 +124,6 @@ exports.createPages = ({ actions, graphql }) => {
         component: templates.coursePosts,
         context: {
           courseName: course.name,
-          // imageUrl: course.imageUrl
         }
       })
     })

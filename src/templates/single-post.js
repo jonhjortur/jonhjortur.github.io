@@ -66,7 +66,7 @@ const SinglePost = ({ data, pageContext }) => {
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         </CardBody>
       </Card>
-      <h3 className="text-center">Share this post</h3>
+      {/* <h3 className="text-center">Share this post</h3>
       <div className="text-center social-share-links">
         <ul>
           <li>
@@ -105,7 +105,7 @@ const SinglePost = ({ data, pageContext }) => {
             <div class="sharethis-inline-share-buttons"></div>
           </li>
         </ul>
-      </div>
+      </div> */}
     </Layout>
   )
 }
@@ -121,7 +121,6 @@ export const postQuery = graphql`
         youtube
         date(formatString: "D/M/YYYY")
         tags
-
         image {
           childImageSharp {
             fluid(maxWidth: 700) {

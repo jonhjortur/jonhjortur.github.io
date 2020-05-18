@@ -36,10 +36,11 @@ class Header extends React.Component {
                 <NavLink href="/tags">Efnisatriði</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/courses">Seríur</NavLink>
+                <NavLink href="/courses">Allar Seríur</NavLink>
+                
               </NavItem>
               <NavItem>
-                <NavLink href="/about">Um síðuna</NavLink>
+                <NavLink href="/jonhjorturcom">Um síðuna</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

@@ -32,7 +32,6 @@ const coursesPosts = ({ data, pageContext }) => {
 export const coursesQuery = graphql`
   query($courseName: String!) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { course: {eq: $courseName}}}
     ) {
       totalCount

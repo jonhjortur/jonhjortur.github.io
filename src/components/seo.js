@@ -4,6 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
+// Ég nenni þessu eiginlega bara ekki !
 
 import React from "react"
 import PropTypes from "prop-types"
@@ -73,7 +74,7 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `is`,
   meta: [],
   description: ``,
 }

@@ -1,13 +1,14 @@
 const slugify = function (text) {
-  return text
-    .toString()
-    .toLowerCase()
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/\+/g, "p") // Skipti út '+' fyrir 'p' til að 'C' og 'C++' vísi ekki eins.
-    .replace(/[^\w-]+/g, "") // Remove all non-word chars
-    .replace(/--+/g, "-") // Replace multiple - with single -
-    .replace(/^-+/, "") // Trim - from start of text
-    .replace(/-+$/, "") // Trim - from end of text
+    return text
+      .toString()
+      .toLowerCase()
+      .replace(/\s+/g, "-") // Replace spaces with -
+      .replace(/\+/g, "p") // Skipti út '+' fyrir 'p' til að 'C' og 'C++' vísi ekki eins.
+      .replace(/[^\w-]+/g, "") // Remove all non-word chars
+      .replace(/--+/g, "-") // Replace multiple - with single -
+      .replace(/^-+/, "") // Trim - from start of text
+      .replace(/-+$/, "") // Trim - from end of text
+
 }
 
 // Næstum alveg stolið héðan: https://stackoverflow.com/questions/3452546/how-do-i-get-the-youtube-video-id-from-a-url
