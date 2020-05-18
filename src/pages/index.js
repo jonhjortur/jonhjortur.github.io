@@ -9,7 +9,7 @@ const IndexPage = () => {
   const postsPerPage = 4
   let numberOfPages
   return (
-    <Layout pageTitle="">
+    <Layout pageTitle="Einhver fyrirsögn">
       <SEO title="Forsíða" keywords={[`/*WHAT TO PUT HERE!!?*/`]} />
       <StaticQuery
         query={indexQuery}

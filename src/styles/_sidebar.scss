@@ -1,39 +1,7 @@
-
-
-.course-social-links {
-  ul {
-    display: inline-flex;
-
-    li {
-      margin: auto 7px;
-
-      a {
-        transition: all 0.1s ease-out;
-        color: $dark-gray;
-
-        &.instagram:hover {
-          color: #e95950;
-        }
-        &.facebook:hover {
-          color: rgb(66, 103, 178);
-        }
-        &.twitter:hover {
-          color: rgb(56, 161, 243);
-        }
-        &.google:hover {
-          color: rgb(221, 75, 57);
-        }
-        &.linkedin:hover {
-          color: rgb(0, 119, 181);
-        }
-        &.github:hover {
-          color: rgb(173, 92, 81);
-        }
-      }
-    }
-  }
-}
-
 .fa-larger {
   font-size: 2em;
 }
+.testBackground {
+  background-color: rgba($color: #000000, $alpha: 0.15);
+}
+

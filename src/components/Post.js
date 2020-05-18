@@ -13,7 +13,7 @@ import { slugify } from "../utils/utilFuncs"
 
 const Post = ({ title, course, slug, date, body, fluid, tags }) => {
   return (
-    <Card>
+    <Card className="border-color">
       <Link to={slug}>
         <Img className="card-image-top" fluid={fluid} />
       </Link>

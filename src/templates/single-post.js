@@ -30,7 +30,7 @@ const SinglePost = ({ data, pageContext }) => {
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
       </Helmet>
       <SEO title={post.title} />
-      <Card>
+      <Card className="border-color">
         <Img
           className="card-image-top"
           fluid={post.image.childImageSharp.fluid}

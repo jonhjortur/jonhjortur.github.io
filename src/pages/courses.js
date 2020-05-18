@@ -9,9 +9,8 @@ import { Row, Card, CardTitle, CardBody, CardText, Button } from "reactstrap"
 import { slugify } from "../utils/utilFuncs"
 
 // Myndir fyrir seríur
-import pythonBasicsThumb from "../images/pythonBasicsThumb.jpg"
-import cppBasicsThumb from "../images/cppBasicsThumb.png"
-import rantPic from "../images/testThumbJS1.jpg"
+import pythonBasicsThumb from "../images/courseThumbs/pythonBasicsThumb.jpg"
+import cppBasicsThumb from "../images/courseThumbs/cppBasicsThumb.png"
 
 const pythonBasics = 0
 const cppBasics = 1
@@ -28,7 +27,7 @@ const CoursesPage = () => (
     <SEO title="Seríur" keywords={[`/*WHAT TO PUT HERE!!?*/`]} />
     
     {/* PYTHON */}
-    <Card>
+    <Card className="border-color">
       <a href={`/course/${slugify(courses[pythonBasics].name)}`}>
         <img src={pythonBasicsThumb} style={{ maxWidth: "100%" }} alt="PYTHON" />
       </a>

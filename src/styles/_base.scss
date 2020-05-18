@@ -2,8 +2,20 @@
   margin-top: 4rem;
 }
 body {
-  background-color: $light-gray;
+  width: 100%;
+  height: 100%;
+  background: url("../images/termBackDark.png") no-repeat center fixed;
+  background-size: cover;
+  background-position: top;
+  font-family: $site-font;
 }
+.heading {
+  color: white;
+}
+.border-color {
+  border-color: black;
+}
+
 a {
   color: #0056b3;
   &:hover {
@@ -11,10 +23,9 @@ a {
     text-decoration: none;
   }
 }
-body {
-  font-family: $site-font;
-}
-h1, h2 {
+
+h1,
+h2 {
   margin: 0px;
   text-align: center;
 }
@@ -25,17 +36,18 @@ h1, h2 {
   margin: 15px 0px;
 }
 .navbar {
-  background-color: white;
+  background-color: rgba($color: #000000, $alpha: .65);
   // border-right: 1px solid rgba(0, 0, 0, 0.4);
   // border-left: 1px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
   line-height: 1;
 }
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
-  color: #0056b3;
+  color: #fff;
   &:hover {
     color: #007bff;
+    font-size: 1.1rem;
   }
 }
 ul {

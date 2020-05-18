@@ -7,7 +7,7 @@ import { slugify } from "../utils/utilFuncs"
 const tagsPage = ({ pageContext }) => {
   const { tags, tagPostCounts } = pageContext
   return (
-    <Layout pageTitle="">
+    <Layout pageTitle="Efnisatriði">
       <SEO
         title="Efnisatriði"
         keywords={["tags", "topics", "efnisatriði", "subjects"]}

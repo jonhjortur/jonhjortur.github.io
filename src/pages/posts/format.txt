@@ -3,7 +3,7 @@ title: ""
 youtube: ""
 date: 2020-mm-dd
 course: ""
-image: ../../images/XxXxX
+image: ../../images/courseThumbs/XxXxX
 tags:
   - someTag
 ---

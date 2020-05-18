@@ -6,10 +6,10 @@ import "../styles/index.scss"
 import courses from "../utils/coursesDescription"
 import portfolioThumb from "../images/portfolioThumbnail.png"
 
-import pythonBasicsThumb from "../images/pythonBasicsThumb.jpg"
-import cppBasicsThumb from "../images/cppBasicsThumb.png"
-import pythonProjectsThumb from "../images/pythonProjectsThumb.jpeg"
-import cppProjectsThumb from "../images/cppProjectsThumb.png"
+import pythonBasicsThumb from "../images/courseThumbs/pythonBasicsThumb.jpg"
+import cppBasicsThumb from "../images/courseThumbs/cppBasicsThumb.png"
+import pythonProjectsThumb from "../images/courseThumbs/pythonProjectsThumb.jpeg"
+import cppProjectsThumb from "../images/courseThumbs/cppProjectsThumb.png"
 
 const pythonBasics = 0
 const cppBasics = 1
@@ -18,34 +18,36 @@ const cppProjects = 3
 
 const Sidebar = () => (
   <div>
-    {/* <Card>
-      <CardBody>
-        <CardTitle className="text-center text-uppercase">Portfolio</CardTitle>
+    <Card className=""> {/* border-color testBackground */}
+      <CardBody className="">
+        <CardTitle className="text-center text-uppercase">Portfolio</CardTitle> {/* heading */}
         <a
           href="https://jonhjortur.com/portfolio"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
+          className="border-color"
             src={portfolioThumb}
             alt="Úbs. Hér á að vera mynd!"
             style={{ width: "100%" }}
           />
         </a>
       </CardBody>
-    </Card> */}
-    <Card>
-      <CardBody>
+    </Card>
+
+    <Card className=""> {/* border-color testBackground */}
+      <CardBody className="">
         {/* Þetta er harðkóðað og afritað úr courses.js sem er ekki fallegt.
         En hvað ætlar þú að gera í því !!? HA!!?
         "Ég á þetta, ég má þetta!!"
         (En ég laga þetta nú samt seinna ef ég vil halda mig við að hafa þetta á þessum stað.)*/}
-        <CardTitle className="text-center text-uppercase mb-3">
+        <CardTitle className="text-center text-uppercase mb-3"> {/* heading */}
           Seríur
         </CardTitle>
 
         {/* PYTHON Basics*/}
-        <Card>
+        <Card className="border-color"> 
           <a href={`/course/${slugify(courses[pythonBasics].name)}`}>
             <img
               src={pythonBasicsThumb}
@@ -68,7 +70,7 @@ const Sidebar = () => (
         </Card>
 
         {/* C++ Basics */}
-        <Card>
+        <Card className="border-color">
           <a href={`/course/${slugify(courses[cppBasics].name)}`}>
             <img
               src={cppBasicsThumb}
@@ -91,7 +93,7 @@ const Sidebar = () => (
         </Card>
 
 {/* Python Projects */}
-<Card>
+<Card className="border-color">
   <a href={`/course/${slugify(courses[pythonProjects].name)}`}>
     <img
       src={pythonProjectsThumb}
@@ -114,7 +116,7 @@ const Sidebar = () => (
 </Card>
 
 {/* C++ Projects */}
-<Card>
+<Card className="border-color">
   <a href={`/course/${slugify(courses[cppProjects].name)}`}>
     <img
       src={cppProjectsThumb}

@@ -30,7 +30,7 @@ const Layout = ({ children, pageTitle, widePageTitle, courseImageFluid, postCour
         <div className="container" id="content">
           <Row md="1">
             <Col md="8">
-              <h2>{pageTitle}</h2>
+              <h2 className="heading">{pageTitle}</h2>
             </Col>
           </Row>
           <h2>{widePageTitle}</h2> {/* Nota þetta kannski fyrir "Efnisatriði"...eða þar sem titillinn getur orðið mjög langur */}

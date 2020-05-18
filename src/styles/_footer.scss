@@ -1,37 +1,9 @@
 .site-footer {
-  background-color: $white;
+  background-color: rgba($color: #000, $alpha: .30);
   margin-top: 20px;
   padding: 10px;
   text-align: center;
+  color: #fff;
   // display: flex;
   // flex-direction: column;
-
-textarea,input {
-  // margin: 0px 5px 0px 5px;
-}
-
-  .footer-social-links {
-    text-align: center;
-
-    ul.social-links-list {
-      li {
-        margin-right: 25px;
-        display: inline-block;
-
-        a {
-          color: $dark-gray;
-
-          &.facebook:hover {
-            color: rgb(66, 103, 178);
-          }
-          &.twitter:hover {
-            color: rgb(56, 161, 243);
-          }
-          &.github:hover {
-            color: rgb(255,192,203);
-          }
-        }
-      }
-    }
-  }
 }
